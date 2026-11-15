@@ -17,6 +17,7 @@ jobs:
           cd MediaServiceCore
           git config user.email "ci@example.com"
           git config user.name "ci"
+          git fetch --unshallow origin || git fetch origin
           git fetch origin pull/68/head:pr68
           git merge --no-edit pr68
           git log --oneline -3
